@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //slog uctoo add
 
 //include './SocketLog.class.php';
@@ -92,3 +92,7 @@ try{
         E($exception->getMessage(),$exception->getCode());
     }
 }
+
+
+
+818
