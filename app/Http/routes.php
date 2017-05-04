@@ -14,6 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('test',function(){
+    return 'test';
+});
+
+Route::post('test_post',function(){
+    return view('welcome');
+});
+//多请求路由
+Route::match(['get','post'],'test_match',function(){
+    return 'test_match';
+});
+Route::any('test_any',function(){
+    return 'test_any';
+});
+//路由参数
+Route::get('user/{id}',function($id){
+    return 'user-' . $id;
+});
+
+Route::get('user/{name?}',function($name='alisa'){
+    return 'user-' . $name;
+});
 
 /*
 |--------------------------------------------------------------------------
